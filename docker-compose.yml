@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  timjabackend:
+    build:
+      context: .
+      args:
+        - http_proxy
+        - https_proxy
+        - no_proxy
+    image: hmctspublic.azurecr.io/labs/timjabackend
+    ports:
+      - $SERVER_PORT:$SERVER_PORT
